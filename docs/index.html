@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金彦祺 · 个人主页</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --navy: #2c5282;
+    --navy-dark: #1e3a5f;
+    --navy-light: #4a7bc8;
+    --gray: #666;
+    --gray-light: #f5f7fa;
+    --gray-border: #e1e5eb;
+    --text: #1a1a1a;
+  }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background: #fafbfc;
+  }
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ===== Hero 区 ===== */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color: #fff;
+    padding: 50px 0 50px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin-bottom: 8px;
+  }
+  .hero .tagline {
+    font-size: 15px;
+    opacity: 0.92;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+  }
+  .hero .contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-size: 13px;
+    opacity: 0.92;
+    margin-bottom: 22px;
+  }
+  .hero .contacts a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.95;
+  }
+  .hero .contacts a:hover { text-decoration: underline; }
+  .hero .cta {
+    display: inline-block;
+    padding: 10px 26px;
+    background: #fff;
+    color: var(--navy);
+    text-decoration: none;
+    border-radius: 24px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hero .cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
+
+  /* ===== 通用 section ===== */
+  section {
+    padding: 40px 0;
+  }
+  .section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    text-align: center;
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--navy);
+    margin: 8px auto 0;
+    border-radius: 2px;
+  }
+  .section-sub {
+    text-align: center;
+    color: var(--gray);
+    font-size: 13px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+
+  /* ===== 关于我 ===== */
+  .about {
+    background: #fff;
+  }
+  .about p {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  /* ===== 项目卡片 ===== */
+  .projects {
+    background: var(--gray-light);
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+  }
+  .project-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 22px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid var(--gray-border);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(44,82,130,0.12);
+    border-color: var(--navy-light);
+  }
+  .project-card.coming-soon {
+    background: #f5f5f5;
+    border: 1px dashed #c5cdd8;
+    opacity: 0.85;
+  }
+  .project-card.coming-soon:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: #c5cdd8;
+  }
+  .project-card h3 {
+    font-size: 16px;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.45;
+  }
+  .project-card.coming-soon h3 {
+    color: #999;
+  }
+  .project-card .desc {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 12px;
+  }
+  .project-card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+  .project-card .tag {
+    background: rgba(44,82,130,0.08);
+    color: var(--navy);
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    border: 1px solid rgba(44,82,130,0.15);
+  }
+  .project-card .links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .project-card .links a {
+    display: inline-block;
+    padding: 6px 14px;
+    background: var(--navy);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .project-card .links a:hover { background: var(--navy-dark); }
+  .project-card .links .badge {
+    font-size: 11px;
+    color: #999;
+  }
+  .project-card.coming-soon .links {
+    justify-content: center;
+  }
+  .project-card.coming-soon .links .badge {
+    font-size: 12px;
+    color: #999;
+    padding: 6px 0;
+  }
+
+  /* ===== 技能 ===== */
+  .skills {
+    background: #fff;
+  }
+  .skill-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .skill-cloud span {
+    background: #fff;
+    color: var(--navy);
+    border: 1px solid var(--gray-border);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  .skill-cloud span:hover {
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+    transform: translateY(-2px);
+  }
+
+  /* ===== 页脚 ===== */
+  footer {
+    background: var(--navy-dark);
+    color: #fff;
+    text-align: center;
+    padding: 24px 0;
+    font-size: 13px;
+  }
+  footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 8px;
+  }
+  footer a:hover { text-decoration: underline; }
+  footer .copyright {
+    margin-top: 8px;
+    opacity: 0.7;
+    font-size: 12px;
+  }
+
+  /* ===== 响应式 ===== */
+  @media (max-width: 600px) {
+    .hero { padding: 32px 0 32px; }
+    .hero h1 { font-size: 26px; letter-spacing: 4px; }
+    .hero .contacts { gap: 6px 12px; font-size: 12px; }
+    section { padding: 28px 0; }
+    .section-title { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ===== Hero ===== -->
+  <header class="hero">
+    <div class="container">
+      <h1>金彦祺</h1>
+      <p class="tagline">测试工程师 / 数据分析师 · 2027 届本科 · 可长期实习</p>
+      <div class="contacts">
+        <span>电话：18120061008</span>
+        <span>邮箱：<a href="mailto:970235470@qq.com">970235470@qq.com</a></span>
+        <span>GitHub：<a href="https://github.com/3yyyyyyyyyy" target="_blank">@3yyyyyyyyyy</a></span>
+      </div>
+      <a class="cta" href="resume.html">查看完整简历 →</a>
+    </div>
+  </header>
+
+  <!-- ===== 关于我 ===== -->
+  <section class="about">
+    <div class="container">
+      <h2 class="section-title">关于我</h2>
+      <p class="section-sub">About Me</p>
+      <p>苏州本地 2027 届本科生，数据科学与大数据技术专业。具备华泰证券数据整理实习经历，独立完成日均数百条 ETF 基金数据的清洗、校验与格式统一；独立开发 Python + unittest 自动化测试脚本，覆盖功能、边界值、异常、数据驱动四类场景。兼具数据清洗与数据校验实战经验，能从数据质量视角反哺测试用例设计。逻辑严谨，做事细致，期望在苏州及周边地区积累测试 / 数据分析实战经验。</p>
+    </div>
+  </section>
+
+  <!-- ===== 项目 ===== -->
+  <section class="projects">
+    <div class="container">
+      <h2 class="section-title">项目展示</h2>
+      <p class="section-sub">Projects · 持续更新中</p>
+      <div class="project-grid" id="projectGrid">
+        <!-- 由 JS 从 projects.json 加载渲染 -->
+        <p style="text-align:center; color:#999; grid-column: 1 / -1;">项目加载中…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 技能 ===== -->
+  <section class="skills">
+    <div class="container">
+      <h2 class="section-title">技能速览</h2>
+      <p class="section-sub">Skills</p>
+      <div class="skill-cloud">
+        <span>Python</span>
+        <span>Java</span>
+        <span>SQL</span>
+        <span>unittest</span>
+        <span>matplotlib</span>
+        <span>自动化测试</span>
+        <span>测试用例设计</span>
+        <span>数据清洗</span>
+        <span>数据校验</span>
+        <span>DeepSeek</span>
+        <span>ChatGPT</span>
+        <span>Claude</span>
+        <span>CET-6</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 页脚 ===== -->
+  <footer>
+    <div class="container">
+      <a href="https://github.com/3yyyyyyyyyy" target="_blank">GitHub</a> ·
+      <a href="mailto:970235470@qq.com">邮箱</a> ·
+      <a href="resume.html">简历</a>
+      <p class="copyright">© 2026 金彦祺 · Personal Homepage</p>
+    </div>
+  </footer>
+
+<script>
+  // 从 projects.json 加载项目卡片
+  (async function() {
+    const grid = document.getElementById('projectGrid');
+    try {
+      const res = await fetch('projects.json');
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const projects = await res.json();
+      grid.innerHTML = '';
+      projects.forEach(function(p) {
+        const isComing = p.status === 'coming_soon';
+        const card = document.createElement('div');
+        card.className = 'project-card' + (isComing ? ' coming-soon' : '');
+
+        // 标题
+        const h3 = document.createElement('h3');
+        h3.textContent = p.title;
+        card.appendChild(h3);
+
+        // 描述
+        if (p.description) {
+          const desc = document.createElement('p');
+          desc.className = 'desc';
+          desc.textContent = p.description;
+          card.appendChild(desc);
+        }
+
+        // 标签
+        if (p.tags && p.tags.length) {
+          const tags = document.createElement('div');
+          tags.className = 'tags';
+          p.tags.forEach(function(t) {
+            const span = document.createElement('span');
+            span.className = 'tag';
+            span.textContent = t;
+            tags.appendChild(span);
+          });
+          card.appendChild(tags);
+        }
+
+        // 链接
+        const links = document.createElement('div');
+        links.className = 'links';
+        if (isComing) {
+          const badge = document.createElement('span');
+          badge.className = 'badge';
+          badge.textContent = 'Coming Soon';
+          links.appendChild(badge);
+        } else {
+          if (p.github_url) {
+            const a = document.createElement('a');
+            a.href = p.github_url;
+            a.target = '_blank';
+            a.textContent = 'GitHub →';
+            links.appendChild(a);
+          }
+          if (p.demo_url) {
+            const a = document.createElement('a');
+            a.href = p.demo_url;
+            a.target = '_blank';
+            a.textContent = '在线预览';
+            links.appendChild(a);
+          }
+          if (p.year) {
+            const badge = document.createElement('span');
+            badge.className = 'badge';
+            badge.textContent = p.year;
+            links.appendChild(badge);
+          }
+        }
+        card.appendChild(links);
+        grid.appendChild(card);
+      });
+    } catch (e) {
+      grid.innerHTML = '<p style="text-align:center; color:#c00; grid-column: 1 / -1;">项目加载失败：' + e.message + '</p>';
+    }
+  })();
+</script>
+</body>
+</html>
