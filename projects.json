@@ -1,0 +1,38 @@
+[
+  {
+    "title": "游戏元素反应伤害计算自动化测试脚本",
+    "description": "基于 Python + unittest 框架独立开发的自动化校验脚本，覆盖功能测试、边界值测试、异常测试、数据驱动测试四大类场景，共 9 个用例全部通过。集成 matplotlib 生成测试统计图表，含完整 README 文档。",
+    "tags": ["Python", "unittest", "matplotlib", "自动化测试", "数据驱动"],
+    "github_url": "https://github.com/3yyyyyyyyyy/yuansu-ceshi",
+    "demo_url": "",
+    "status": "active",
+    "year": "2026"
+  },
+  {
+    "title": "项目二 · 即将上线",
+    "description": "更多实战项目正在筹备中，敬请期待。",
+    "tags": [],
+    "github_url": "",
+    "demo_url": "",
+    "status": "coming_soon",
+    "year": ""
+  },
+  {
+    "title": "项目三 · 即将上线",
+    "description": "更多实战项目正在筹备中，敬请期待。",
+    "tags": [],
+    "github_url": "",
+    "demo_url": "",
+    "status": "coming_soon",
+    "year": ""
+  },
+  {
+    "title": "项目四 · 即将上线",
+    "description": "更多实战项目正在筹备中，敬请期待。",
+    "tags": [],
+    "github_url": "",
+    "demo_url": "",
+    "status": "coming_soon",
+    "year": ""
+  }
+]

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金彦祺 - 简历</title>
+<style>
+  @page {
+    size: A4;
+    margin: 1.4cm 1.6cm;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    color: #1a1a1a;
+    line-height: 1.5;
+    font-size: 10.5pt;
+    background: #fafbfc;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  /* 返回首页链接（打印时隐藏） */
+  .back-link {
+    max-width: 18cm;
+    margin: 14px auto 6px;
+    text-align: right;
+  }
+  .back-link a {
+    color: #2c5282;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 6px 14px;
+    border: 1px solid #2c5282;
+    border-radius: 4px;
+    background: #fff;
+    display: inline-block;
+  }
+  .back-link a:hover { background: #2c5282; color: #fff; }
+  @media print {
+    .back-link { display: none; }
+    body { background: #fff; }
+  }
+  .resume {
+    max-width: 18cm;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1.4cm 1.6cm;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  @media print {
+    .resume {
+      box-shadow: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  /* 头部：姓名在左，照片在右 */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+  .header-left {
+    flex: 1;
+  }
+  .name {
+    text-align: left;
+    font-size: 20pt;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 2px;
+  }
+  .intent {
+    text-align: left;
+    font-size: 11pt;
+    color: #2c5282;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .photo {
+    width: 2.8cm;
+    height: 3.8cm;
+    object-fit: cover;
+    border: 1px solid #d0d0d0;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    flex-shrink: 0;
+  }
+  .contact {
+    text-align: center;
+    font-size: 9.5pt;
+    color: #666;
+    margin-bottom: 6px;
+    border-bottom: 1.5px solid #2c5282;
+    padding-bottom: 4px;
+    padding-top: 2px;
+  }
+  .contact span {
+    margin: 0 4px;
+  }
+  h2 {
+    font-size: 11.5pt;
+    color: #2c5282;
+    border-left: 3px solid #2c5282;
+    padding-left: 6px;
+    margin: 6px 0 2px 0;
+    font-weight: 700;
+  }
+  .item-title {
+    font-weight: 700;
+    font-size: 10.5pt;
+    margin: 3px 0 1px 0;
+    line-height: 1.5;
+  }
+  .item-title::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .item-title .meta {
+    font-weight: 400;
+    color: #666;
+    font-size: 9.5pt;
+    float: right;
+  }
+  .item-sub {
+    font-weight: 400;
+    font-size: 9.5pt;
+    color: #666;
+    margin: 0 0 1px 0;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul li {
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 1px;
+    font-size: 10pt;
+    line-height: 1.5;
+  }
+  ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2c5282;
+    font-weight: 700;
+  }
+  .section {
+    margin-bottom: 2px;
+  }
+  .summary {
+    margin: 2px 0;
+    font-size: 10pt;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<div class="back-link">
+  <a href="index.html">← 返回首页</a>
+</div>
+
+<div class="resume">
+
+  <div class="header">
+    <div class="header-left">
+      <div class="name">金彦祺</div>
+      <div class="intent">求职意向：测试工程师 / 数据分析师</div>
+    </div>
+    <img class="photo" src="assets/photo.png" alt="金彦祺">
+  </div>
+  <div class="contact">
+    <span>电话：18120061008</span>|
+    <span>邮箱：970235470@qq.com</span>|
+    <span>GitHub：github.com/3yyyyyyyyyy/yuansu-ceshi</span>
+  </div>
+
+  <div class="section">
+    <h2>教育背景</h2>
+    <div class="item-title">苏州工学院 | 数据科学与大数据技术 <span class="meta">2023.09 - 2027.06</span></div>
+    <ul>
+      <li>2027届本科，可长期实习</li>
+      <li>熟练掌握：Python、Java、SQL</li>
+      <li>主修课程：数据结构、数据库、Python程序设计、概率统计、数据分析、机器学习、java、大数据可视化</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>实习经历</h2>
+    <div class="item-title">华泰证券 | 数据整理实习生 <span class="meta">2026.01 - 2026.02</span></div>
+    <ul>
+      <li>独立完成日均数百条ETF基金数据的整理、清洗与校验，统一多源数据格式与口径</li>
+      <li>建立数据校验规则，标记异常值并追溯源头，确保入库数据准确性</li>
+      <li>发现数据源格式不一致问题（百分比/小数混用），制定统一标准并落地执行</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>项目经历</h2>
+    <div class="item-title">游戏元素反应伤害计算自动化测试脚本 | 独立开发 <span class="meta">2026.06 - 2026.08</span></div>
+    <div class="item-sub">项目链接：github.com/3yyyyyyyyyy/yuansu-ceshi</div>
+    <ul>
+      <li>独立设计测试方案，基于Python + unittest框架编写自动化校验脚本</li>
+      <li>覆盖功能测试、边界值测试、异常测试、数据驱动测试四大类场景，共9个用例全部通过</li>
+      <li>设计参数校验模块与异常捕获机制，确保输入异常时程序正确抛出错误</li>
+      <li>集成matplotlib生成测试统计图表，撰写完整README文档说明项目背景与运行方式</li>
+      <li>核心能力体现：测试用例设计、自动化校验、数据准确性验证、代码工程化</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>技能与证书</h2>
+    <ul>
+      <li>编程语言：Python、Java、SQL</li>
+      <li>测试工具：unittest、matplotlib</li>
+      <li>AI工具：熟练使用DeepSeek、ChatGPT、Claude辅助代码开发与文档撰写</li>
+      <li>语言能力：英语CET-6</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>自我评价</h2>
+    <p class="summary">苏州本地2027届本科生，数据科学与大数据技术专业，可长期实习。具备华泰证券数据整理实习经历，独立完成日均数百条ETF基金数据的清洗、校验与格式统一，熟悉数据准确性验证与问题追溯。独立开发Python+unittest自动化测试脚本，覆盖功能、边界值、异常、数据驱动四类场景，具备测试用例设计与代码工程化能力。掌握Python、Java、SQL，熟悉unittest、matplotlib，英语CET-6。相比纯测试背景候选人，兼具数据清洗与数据校验实战经验，能从数据质量视角反哺测试用例设计。逻辑严谨，做事细致，期望在苏州及周边地区积累测试/数据分析实战经验。</p>
+  </div>
+
+</div>
+</body>
+</html>
